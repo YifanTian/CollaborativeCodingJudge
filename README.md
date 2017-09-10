@@ -7,3 +7,6 @@ Project: Collaborative Online Judge System
 ● Built a user-code executor service which can build and execute user’s code (Docker, Flask);  
 ● Refactored and Improved system throughput by decoupling services using RESTful API and loading balancing by Nginx. (REST API, Nginx)  
 Skills: JavaScript, Python, Angular2, Node.js, Express, Redis, MongoDB, Docker, RESTful API, Nginx.   Tools: Unix / Linux, VirtualBox, Git, Sublime(Atom/Vim), Apache Bench.  
+
+You need to install augular4, Nginx, Redis first.
+Use sh launch.sh to launch. 
