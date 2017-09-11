@@ -1,0 +1,23 @@
+<div class="container" *ngIf = "problem">
+  <div class="col-xs-12 col-md-4">
+    <h2>
+      {{problem.id}}. {{problem.name}}
+    </h2>
+    <p>
+      {{problem.desc}}
+    </p>
+      <!-- <img src="../../../img/Last_Round.jpg" class="img-rounded" alt="Cinque Terre" width="304" height="236"> -->
+
+    <div id="scrollArea" ng-controller="ScrollController">
+      <a ng-click="gotoBottom()">Go to bottom</a>
+        <h3> For furture use like chat.. </h3>
+        <h3> Or notes.. </h3>
+      <a id="bottom"></a> You're at the bottom!
+    </div>
+
+  </div>
+  <div class="hidden-xs col-sm-12 col-md-8">
+    <app-editor></app-editor>
+  </div>
+</div>
+<img src="../../../img/Last_Round.jpg" class="img-rounded" alt="Cinque Terre" width="304" height="236">

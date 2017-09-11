@@ -1,0 +1,24 @@
+
+
+<div class="chatArea">
+  <!--<ul class="messages"></ul>-->
+  <label for="chatArea">Messages:</label>
+    <textarea name="chatArea" id="chatArea" class="form-control"
+            [(ngModel)]="messages" rows="3">
+    </textarea>
+</div>
+<!--<input class="inputMessage" placeholder="Type here..." [(ngModel)]="inputMessage"/>-->
+<form #formRef="ngForm">
+    <div class="form-group">
+      <input name="sendmessage" id="sendmessage" class="form-control"
+             type="text" required placeholder="Enter message here..."
+             [(ngModel)]="inputMessage">
+    </div>
+    <div class="row">
+      <div class="col-md-12">
+        <button type="submit" class="btn btn-primary pull-right"
+                (click)="sendMessage()"
+        >send</button>
+      </div>
+    </div>
+</form>

@@ -1,0 +1,48 @@
+
+<div class="container">
+<app-new-problem></app-new-problem>
+<br/>
+<!-- Stack the columns on mobile by making one full-width and the other half-width -->
+<div class="row">
+  <div class="col-xs-12 col-md-10"></div>
+  <div class="col-xs-6 col-md-2">
+
+    <div class="btn-group">
+      <button type="button" class="btn btn-danger">Sort By</button>
+      <button type="button" class="btn btn-danger dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+        <span class="caret"></span>
+        <span class="sr-only">Toggle Dropdown</span>
+      </button>
+      <ul class="dropdown-menu">
+         <!--<div class="row">
+          <button type="button">Sort By</button>
+         </div>
+         <div class="row">
+          <button type="button">Sort By</button>
+         </div>-->
+        <li><a type="button" class="btn btn-default" (click)="sortProblemsByDifficulty(1)" >Difficulty Up</a></li>
+        <li><a type="button" class="btn btn-default" (click)="sortProblemsByDifficulty(2)" >Difficulty Dn</a></li>
+        <!--<li><a href="#">Another action</a></li>-->
+        <!--<li><a href="#">Something else here</a></li>-->
+        <!--<li role="separator" class="divider"></li>
+        <li><a href="#">Separated link</a></li>-->
+      </ul>
+    </div>
+
+  </div>
+</div>
+<br/>
+  
+  <div class="list-group">
+    <a class="list-group-item" *ngFor="let problem of problems"
+     [routerLink]="['/problems', problem.id]">
+      <span class="{{'pull-left label difficulty diff-' + problem.difficulty.toLocaleLowerCase()}}">
+        {{problem.difficulty}}
+      </span>
+      <strong class="title">{{problem.id}}. {{problem.name}}</strong>
+    </a>
+  </div>
+  <app-square></app-square>
+  <app-game-list></app-game-list>
+</div>
+

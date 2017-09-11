@@ -1,0 +1,30 @@
+
+<div class="container">
+
+<strong class="title">Number of Players: </strong>
+<div class="btn-group btn-group-justified" role="group" aria-label="...">
+  <div class="btn-group" role="group">
+    <button type="button" class="btn btn-default" (click)="filterGameByPlayers(1)">1</button>
+  </div>
+  <div class="btn-group" role="group">
+    <button type="button" class="btn btn-default" (click)="filterGameByPlayers(2)">2</button>
+  </div>
+  <div class="btn-group" role="group">
+    <button type="button" class="btn btn-default" (click)="filterGameByPlayers(3)">3</button>
+  </div>
+</div>
+<br/>
+
+  <div class="list-group">
+    <a class="list-group-item" *ngFor="let game of games"
+     [routerLink]="['/games', game.id]">
+      <span class="{{'pull-left label difficulty diff-' + game.difficulty}}">
+        {{game.difficulty}}
+      </span>
+      <strong class="title">{{game.id}}. {{game.name}} </strong>
+      <span class="{{'pull-right'}}">
+         <strong class="title">Number of Players: {{game.players}} </strong>
+      </span>
+    </a>
+  </div>
+</div>
